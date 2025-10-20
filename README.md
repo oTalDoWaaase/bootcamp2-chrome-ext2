@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 ## Containerização + CI (Entrega Intermediária)
@@ -26,3 +27,6 @@ npm run test:e2e
 
 
 > Esta entrega inclui MV3 + Playwright + Docker/CI. Build: `npm run build`. Testes: `npm run test:e2e`.
+=======
+# bootcamp2-chrome-ext2
+>>>>>>> 6ee2a555dfde6cfda578b23b39c18b6dba8e80be
