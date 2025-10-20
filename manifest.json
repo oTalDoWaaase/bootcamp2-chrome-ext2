@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Bootcamp Helper",
+  "version": "1.2.0",
+  "description": "Extensão MV3 com opções, badge e content script para developer.chrome.com.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "Bootcamp Helper",
+    "default_popup": "src/popup/popup.html"
+  },
+  "options_page": "src/options/options.html",
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://developer.chrome.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://developer.chrome.com/*"
+      ],
+      "js": [
+        "src/content/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
